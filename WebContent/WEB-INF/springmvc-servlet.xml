@@ -25,15 +25,14 @@
 	</bean>
 
 
-<!--	<mvc:interceptors>-->
-<!--		<bean class="com.sxt.interceptor.MyInterceptor"></bean>--> <!-- 拦截所有springmvc的url！ -->
-<!--		<bean class="com.sxt.interceptor.MyInterceptor3"></bean>-->
+	<mvc:interceptors>
+		<bean class="com.norlink.interceptor.Myinterceptor"></bean> <!-- 拦截所有springmvc的url！ -->
 <!--		<mvc:interceptor>-->
 <!--			<mvc:mapping path="/spmvc.do" />-->
 <!--			<mvc:mapping path="/test/*" />-->
 <!--			<bean class="com.sxt.interceptor.MyInterceptor2"></bean>-->
 <!--		</mvc:interceptor>-->
-<!--	</mvc:interceptors>-->
+	</mvc:interceptors>
 
 
 

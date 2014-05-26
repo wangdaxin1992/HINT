@@ -1,14 +1,7 @@
-<%@ page language="java" import="java.util.*" pageEncoding="gbk"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
-    
     <title>My JSP 'index.jsp' starting page</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,6 +14,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-		${requestScope.user.name} <br/>
+
+	<form action="user.do">
+		<input type ="text" name="name"/><br/>
+		<input type="password" name="password"><br/>
+			<input type=hidden name=method value=reg   />
+		<input type="submit" value = "提交"> 
+	</form>
   </body>
 </html>

@@ -45,7 +45,7 @@ http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
                </props>
            </property>
 		<property name="packagesToScan">
-			<value>com.sxt.po</value>
+			<value>com.norlink.po</value>
 		</property>
    </bean>  
 
@@ -65,7 +65,7 @@ http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
 </bean>
 <tx:annotation-driven transaction-manager="txManager" />
 <aop:config> 
-	<aop:pointcut expression="execution(public * com.sxt.service.impl.*.*(..))" id="businessService"/> 
+	<aop:pointcut expression="execution(public * com.norlink.service.impl.*.*(..))" id="businessService"/> 
 	<aop:advisor advice-ref="txAdvice" pointcut-ref="businessService" /> 
 </aop:config> 
 <tx:advice id="txAdvice" transaction-manager="txManager" > 
