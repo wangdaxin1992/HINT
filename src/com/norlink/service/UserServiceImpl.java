@@ -1,6 +1,7 @@
 package com.norlink.service;
 
 import java.text.SimpleDateFormat;
+import java.util.List;
 import java.sql.Date;
 
 import javax.annotation.Resource;
@@ -31,6 +32,10 @@ public class UserServiceImpl implements UserService{
 
 	public void setUserdao(UserDAO userdao) {
 		this.userdao = userdao;
+	}
+
+	public List <User> list() {
+		return userdao.list();
 	}
 
 	

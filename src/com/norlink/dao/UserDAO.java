@@ -1,5 +1,7 @@
 package com.norlink.dao;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.orm.hibernate3.HibernateTemplate;
@@ -21,6 +23,10 @@ public class UserDAO {
 		hibernateTemplate.save(user);
 	}
 
+	public List<User> list (){
+		List <User> user = hibernateTemplate.find("from User");
+		return user;
+	} 
 
 	public HibernateTemplate getHibernateTemplate() {
 		return hibernateTemplate;
