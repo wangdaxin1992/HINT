@@ -19,10 +19,10 @@ public class UserServiceImpl implements UserService{
 	
 	public void add(User user) {
 		user.setStartdate(new Date(System.currentTimeMillis()));
-		System.out.println(user.getId());
-		System.out.println(user.getName());
-		System.out.println(user.getPassword());
-		System.out.println(user.getStartdate());
+//		System.out.println(user.getId());
+//		System.out.println(user.getName());
+//		System.out.println(user.getPassword());
+//		System.out.println(user.getStartdate());
 		userdao.add(user);
 	}
 
